@@ -59,13 +59,20 @@
 [[file:cheapinov2.jpg][cheapino v2]]
 *** Dactyl
 **** Manuform
+[[file:dactyl manuform.jpg][dactyl manuform]]
 **** Cygnus
+[[file:cygnus.jpg][cygnus]]
 **** Charybdis
+[[file:charybdis.jpg][charybdis]]
 **** Custom!
+[[https://ryanis.cool/cosmos/beta][Cosmos]]
+[[https://ryanis.cool/cosmos/beta#cm:CpgBCg8SBRCAPyAnEgASABIAODsKDxIFEIBLICcSABIAEgA4JwocEgUQgFcgJxIAEgASAxCwLxIDELBfOBNAgPC8AgoXEgUQgGMgJxIAEgASAxCwOxIDELBrOAAKFRIFEIBvICcSABIAEgA4FECAhorABwoXEgIgJxIAEgMQoE4SAhAwOChAgIaKwAcYAEC6iaCu8FVI3JC6oAIKbgoXEhMQwIACQJeMoAJI3YWQ3bDXEVBDOAgKGBIQEEBAgIAgSJyX2NawsgNQCzCAIFCeAgoWEhEQQECAgPgBSLSJgOzwsBBQV1CXARgCIg0IyAEQyAEYACAAKIgOMIAoQMuLlKXQMUitkdyNwZMGIgMghAeCAQkEAJMFZFoyAAJYSGADcgc4CkAUcJIJeJCH3IzRN/IBAggB][Pacane]]
 *** https://www.reddit.com/r/ErgoMechKeyboards/
 * Faire son propre clavier
 ** Comment ça marche?
 *** Grid
+[[https://pcbheaven.com/wikipages/How_Key_Matrices_Works/][Matrice]]
+[[file:matrix-1.gif][Matrice 1]]
 *** Équipement requis
 **** Fer à souder
 **** Fil d'étain
@@ -73,11 +80,16 @@
 **** Imprimante 3D (optionnel)
 *** Composantes
 **** Contrôleur
+**** Plates/Case
 **** Switches
 **** Keycaps
 **** Sockets
 **** Diodes
 **** LEDs
+**** PCBs
+[[file:corne pcb.jpg][corne v2 pcb]]
+[[file:amoeba-kings.webp][amoeba kings]]
+[[file:pcball.jpg][autre ss pcb]]
 *** Où trouver les composantes?
 **** JCLPCB
 **** PCBWay
@@ -95,4 +107,13 @@
 ***** Plus flexible
 ***** Plus long/difficile
 ***** Single switch PCB
-
+* Configuration
+** Flash firmware
+*** ZMK
+*** QMK
+** Features
+*** LEDs
+*** OLEDs
+*** Encodeurs
+*** Émulation souris
+*** Keymap
