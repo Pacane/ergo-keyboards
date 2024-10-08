@@ -117,3 +117,15 @@
 *** Encodeurs
 *** Émulation souris
 *** Keymap
+* Considérations
+** Adaptation
+*** Layout
+*** Espace mental
+*** Pratique
+**** Keybr
+**** Monkeytype
+**** Autres jeux
+**** Coder
+*** Alternance au travail pour productivité
+** Coût
+** Temps
