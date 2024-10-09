@@ -1,7 +1,4 @@
-#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
-#+REVEAL_TITLE_SLIDE: Le puits sans fond des claviers ergonomiques: comment créer son clavier.
-#+REVEAL-SLIDE-NUMBER: nil
-
+* Le puits sans fond des claviers ergonomiques: comment créer son propre clavier
 * Pourquoi?
 - Douleurs reliées à la posture
 - Douleurs reliées aux répétitions (RSI)
@@ -14,14 +11,18 @@
 * Par où commencer?
 * Les bonnes questions à se poser
 ** Split/Unibody
+[[file:keychron alice.webp]]
 ** Profil du clavier
 ** Type de touches / switches
 *** MX/Choc/Gateron
 ** Layout
 *** Row staggered
-*** Column staggered
 *** Ortholinear
+[[file:staggered vs ortho.jpg]]
+*** Column staggered
+[[file:voyager.png]]
 *** Aggressivité du layout
+[[file:cantor keyboard.webp]]
 ** Filaire ou non
 ** Firmware désiré
 *** QMK
@@ -34,12 +35,14 @@
 * Le marché ressemble à quoi?
 ** Commercial
 *** Microsoft Natural Ergonomic Keyboard 4000
+[[file:microsoft natural ergo.png]]
 *** ZSA
 **** Voyager
 [[file:./voyager.png]] 
 **** Moonlander
 [[file:./moonlander.jpg]] 
 **** Ergodox
+[[file:ergodox ez.webp]]
 *** MoErgo Glove80
 [[file:glove80.jpg]]
 *** Kinesis
@@ -71,6 +74,7 @@
 * Faire son propre clavier
 ** Comment ça marche?
 *** Grid
+[[file:pro micro.png]]
 [[https://pcbheaven.com/wikipages/How_Key_Matrices_Works/][Matrice]]
 [[file:matrix-1.gif][Matrice 1]]
 *** Équipement requis
@@ -103,40 +107,42 @@
 [[file:amoeba-kings.webp]]
 [[file:pcball.jpg]]
 *** Où trouver les composantes?
-**** JCLPCB
-**** PCBWay
-**** AliExpress
-**** Amazons
-**** Mouser
-**** DigiKey
+- JCLPCB
+- PCBWay
+- AliExpress
+- Amazons
+- Mouser
+- DigiKey
 *** PCB vs filé à la main
 **** PCB
-***** Plus facile
-***** Requiert plus de planification à l'avance
-***** KiCad
+- Plus facile
+- Requiert plus de planification à l'avance
+- KiCad
 **** Filé à la main
-***** Plus volumineux
-***** Plus flexible
-***** Plus long/difficile
-***** Single switch PCB
+- Plus volumineux
+- Plus flexible
+- Plus long/difficile
+- Single switch PCB
 * Configuration
 ** Flash firmware
-*** ZMK
-*** QMK
+- ZMK
+- QMK
 ** Features
-*** LEDs
-*** OLEDs
-*** Encodeurs
-*** Émulation souris
-*** Keymap
+- LEDs
+- OLEDs
+- Encodeurs
+- Émulation souris
+- Keymap
 * Considérations
 ** Adaptation
 *** Espace mental
 *** Layouts alternatifs
+**** Français?
 **** Colemak-DH
 [[file:colemak_dhm.png]]
 **** Layers
 **** Miryoku
+[[file:miryoku.png]]
 **** Custom!
 ** Pratique
 *** Keybr
