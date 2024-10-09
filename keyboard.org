@@ -3,14 +3,14 @@
 #+REVEAL-SLIDE-NUMBER: nil
 
 * Pourquoi?
-** Douleurs reliées à la posture
-** Douleurs reliées aux répétitions (RSI)
-** Pour le plaisir
+- Douleurs reliées à la posture
+- Douleurs reliées aux répétitions (RSI)
+- Pour le plaisir
 * Un clavier ergonomique?
-** Qui réduit la "ulnar deviation"
-** Qui réduit l'angulation arrière des poignets
-** Qui permet d'ajuster la posture
-** Qui permet de réduire les mouvements
+- Qui réduit la "ulnar deviation"
+- Qui réduit l'angulation arrière des poignets
+- Qui permet d'ajuster la posture
+- Qui permet de réduire les mouvements
 * Par où commencer?
 * Les bonnes questions à se poser
 ** Split/Unibody
@@ -41,29 +41,29 @@
 [[file:./moonlander.jpg]] 
 **** Ergodox
 *** MoErgo Glove80
-[[file:glove80.jpg][glove80]]
+[[file:glove80.jpg]]
 *** Kinesis
 **** Advantage 360
-[[file:advantage pro 360.jpg][advantage pro 360]]
+[[file:advantage pro 360.jpg]]
 **** Advantage 2
-[[file:advantage 2.jpg][advantage 2]]
+[[file:advantage 2.jpg]]
 *** Dygma
 **** Raise
 **** Defy
 ** DIY
 *** Corne
-[[file:corne.jpg][Corne]]
+[[file:corne.jpg]]
 *** Lily58
-[[file:lily58.jpg][Lily58]]
+[[file:lily58.jpg]]
 *** Cheapino
-[[file:cheapinov2.jpg][cheapino v2]]
+[[file:cheapinov2.jpg]]
 *** Dactyl
 **** Manuform
-[[file:dactyl manuform.jpg][dactyl manuform]]
+[[file:dactyl manuform.jpg]]
 **** Cygnus
-[[file:cygnus.jpg][cygnus]]
+[[file:cygnus.jpg]]
 **** Charybdis
-[[file:charybdis.jpg][charybdis]]
+[[file:charybdis.jpg]]
 **** Custom!
 [[https://ryanis.cool/cosmos/beta][Cosmos]]
 [[https://ryanis.cool/cosmos/beta#cm:CpgBCg8SBRCAPyAnEgASABIAODsKDxIFEIBLICcSABIAEgA4JwocEgUQgFcgJxIAEgASAxCwLxIDELBfOBNAgPC8AgoXEgUQgGMgJxIAEgASAxCwOxIDELBrOAAKFRIFEIBvICcSABIAEgA4FECAhorABwoXEgIgJxIAEgMQoE4SAhAwOChAgIaKwAcYAEC6iaCu8FVI3JC6oAIKbgoXEhMQwIACQJeMoAJI3YWQ3bDXEVBDOAgKGBIQEEBAgIAgSJyX2NawsgNQCzCAIFCeAgoWEhEQQECAgPgBSLSJgOzwsBBQV1CXARgCIg0IyAEQyAEYACAAKIgOMIAoQMuLlKXQMUitkdyNwZMGIgMghAeCAQkEAJMFZFoyAAJYSGADcgc4CkAUcJIJeJCH3IzRN/IBAggB][Pacane]]
@@ -80,21 +80,33 @@
 **** Imprimante 3D (optionnel)
 *** Composantes
 **** Contrôleur
+[[file:pro micro.png]]
 **** Plates/Case
+[[file:corne plate.jpg]]
 **** Switches
+[[file:choc v1.webp]]
+[[file:cherry switch.jpg]]
 **** Keycaps
+[[file:choc keycaps.jpg]]
 **** Sockets
+[[file:kailh hot swap.webp]]
 **** Diodes
+[[file:smd diode.jpg]]
+[[file:through hole diodes.jpg]]
+[[file:through hole diode corne.jpg]]
+[[file:smd diode corne.jpg]]
 **** LEDs
+[[file:per key led.avif]]
+[[file:underglow led.png]]
 **** PCBs
-[[file:corne pcb.jpg][corne v2 pcb]]
-[[file:amoeba-kings.webp][amoeba kings]]
-[[file:pcball.jpg][autre ss pcb]]
+[[file:corne pcb.jpg]]
+[[file:amoeba-kings.webp]]
+[[file:pcball.jpg]]
 *** Où trouver les composantes?
 **** JCLPCB
 **** PCBWay
 **** AliExpress
-**** Amazon
+**** Amazons
 **** Mouser
 **** DigiKey
 *** PCB vs filé à la main
@@ -119,13 +131,18 @@
 *** Keymap
 * Considérations
 ** Adaptation
-*** Layout
 *** Espace mental
-*** Pratique
-**** Keybr
-**** Monkeytype
-**** Autres jeux
-**** Coder
-*** Alternance au travail pour productivité
+*** Layouts alternatifs
+**** Colemak-DH
+[[file:colemak_dhm.png]]
+**** Layers
+**** Miryoku
+**** Custom!
+** Pratique
+*** Keybr
+*** Monkeytype
+*** Autres jeux
+*** Coder
+** Alternance au travail pour productivité
 ** Coût
 ** Temps
