@@ -147,17 +147,17 @@ Exemple:
 [[file:~/qmk_firmware/keyboards/crkbd/keymaps/pacane/keymap.c]]
 #+BEGIN_SRC c 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [_CLMK] = LAYOUT_split_3x6_3(
-      MEH_ESC,  HOME_Q, HOME_W,  HOME_F,  HOME_P,  HOME_B,                       HOME_J,  HOME_L,  HOME_U,   HOME_Y, HOME_SCLN, XXXXXXX,
-      KC_LSFT,  HOME_A, HOME_R,  HOME_S,  HOME_T,  HOME_G,                       HOME_M,  HOME_N,  HOME_E,   HOME_I, HOME_O,    RSFT_QUOT,
-      LCTL_TAB, KC_Z,   KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H,    T_BRKT,   KC_DOT, KC_SLSH,   KC_ESC,
-                                         T_FUN,   T_LOW,   KC_SPC,     T_NUM,   T_UP,    RALT_T(KC_DEL)
+  [_CLMK] = LAYOUT_split_3x6_3(
+      MEH_ESC,  HOME_Q, HOME_W,  HOME_F,  HOME_P,  HOME_B,          
+      KC_LSFT,  HOME_A, HOME_R,  HOME_S,  HOME_T,  HOME_G,          
+      LCTL_TAB, KC_Z,   KC_X,    KC_C,    KC_D,    KC_V,            
+                                         T_FUN,   T_LOW,   KC_SPC,  
   ),
   [_LOW] = LAYOUT_split_3x6_3(
-     KC_TAB,  XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,  KC_MPRV,                     U_UND,   U_PST,   U_CPY,   U_CUT,    U_RDO,   KC_DEL,
-    MO(_WIN), XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_MPLY,                     KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, XXXXXXX, XXXXXXX,
-     KC_LCTL, XXXXXXX, XXXXXXX, KC_RBRC, XXXXXXX,  KC_MNXT,                     KC_HOME, KC_PGDN, KC_PGUP, KC_END,   XXXXXXX, XXXXXXX,
-                                          _______, _______, _______,   LALT(KC_ENT), MO(_ADJ), _______
+     KC_TAB,  XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,  KC_MPRV,         
+    MO(_WIN), XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_MPLY,         
+     KC_LCTL, XXXXXXX, XXXXXXX, KC_RBRC, XXXXXXX,  KC_MNXT,         
+                                          _______, _______, _______,
   ),
 };
 #+END_SRC
@@ -180,11 +180,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 **** Miryoku
 [[file:miryoku.png]]
 **** Custom!
-** Pratique
-*** Keybr
-*** Monkeytype
-*** Autres jeux
-*** Coder
+*** Pratique
+- Keybr
+- Monkeytype
+- Autres jeux
+- Coder
 ** Alternance au travail pour productivité
 ** Coût
 ** Temps
