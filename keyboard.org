@@ -6,6 +6,7 @@
 * Un clavier ergonomique?
 - Qui réduit la "ulnar deviation"
 - Qui réduit l'angulation arrière des poignets
+- Qui réduit la pronation des avant-bras
 - Qui permet d'ajuster la posture
 - Qui permet de réduire les mouvements
 * Par où commencer?
@@ -125,22 +126,56 @@
 - Single switch PCB
 * Configuration
 ** Flash firmware
-- ZMK
-- QMK
+*** QMK
+- Open source
+- Mature
+- Wired
+- Support souris/pointing devices
+*** ZMK
+- Open source
+- Assez récent
+- Wireless first
+- Pas du support pour souris(-ish)
 ** Features
 - LEDs
 - OLEDs
 - Encodeurs
 - Émulation souris
-- Keymap
+** Keymap
+Exemple:
+[[file:~/qmk_firmware/keyboards/crkbd/keymaps/pacane/keymap.c]]
+#+BEGIN_SRC c 
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    [_CLMK] = LAYOUT_split_3x6_3(
+      MEH_ESC,  HOME_Q, HOME_W,  HOME_F,  HOME_P,  HOME_B,                       HOME_J,  HOME_L,  HOME_U,   HOME_Y, HOME_SCLN, XXXXXXX,
+      KC_LSFT,  HOME_A, HOME_R,  HOME_S,  HOME_T,  HOME_G,                       HOME_M,  HOME_N,  HOME_E,   HOME_I, HOME_O,    RSFT_QUOT,
+      LCTL_TAB, KC_Z,   KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H,    T_BRKT,   KC_DOT, KC_SLSH,   KC_ESC,
+                                         T_FUN,   T_LOW,   KC_SPC,     T_NUM,   T_UP,    RALT_T(KC_DEL)
+  ),
+  [_LOW] = LAYOUT_split_3x6_3(
+     KC_TAB,  XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,  KC_MPRV,                     U_UND,   U_PST,   U_CPY,   U_CUT,    U_RDO,   KC_DEL,
+    MO(_WIN), XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_MPLY,                     KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, XXXXXXX, XXXXXXX,
+     KC_LCTL, XXXXXXX, XXXXXXX, KC_RBRC, XXXXXXX,  KC_MNXT,                     KC_HOME, KC_PGDN, KC_PGUP, KC_END,   XXXXXXX, XXXXXXX,
+                                          _______, _______, _______,   LALT(KC_ENT), MO(_ADJ), _______
+  ),
+};
+#+END_SRC
 * Considérations
 ** Adaptation
 *** Espace mental
 *** Layouts alternatifs
+**** Ergonomie vs Minimalisme
+- On amène les touches aux doigts et non les doigts aux touches.
+- 34 touches?
+  [[file:ferris sweep.webp]]
+**** Fonctionalités pour aider au minimalisme
+- Hold Tap
+- Mod Tap
+- Layers
+- Homerow mods
 **** Français?
 **** Colemak-DH
 [[file:colemak_dhm.png]]
-**** Layers
 **** Miryoku
 [[file:miryoku.png]]
 **** Custom!
