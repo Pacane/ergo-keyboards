@@ -18,18 +18,18 @@
 *** MX/Choc/Gateron
 ** Layout
 *** Row staggered
+[[file:row staggered.jpg]]
 *** Ortholinear
-[[file:staggered vs ortho.jpg]]
+[[file:ortho.jpg]]
 *** Column staggered
 [[file:voyager.png]]
 *** Aggressivité du layout
 [[file:cantor keyboard.webp]]
-** Filaire ou non
+** Avec ou sans fil
 ** Firmware désiré
-*** QMK
-*** ZMK
-*** KMK
-*** etc
+- QMK
+- ZMK
+- KMK
 ** DIY?
 *** Soudure
 *** Hot swap
@@ -62,13 +62,13 @@
 *** Cheapino
 [[file:cheapinov2.jpg]]
 *** Dactyl
-**** Manuform
+- Manuform
 [[file:dactyl manuform.jpg]]
-**** Cygnus
+- Cygnus
 [[file:cygnus.jpg]]
-**** Charybdis
+- Charybdis
 [[file:charybdis.jpg]]
-**** Custom!
+- Custom!
 [[https://ryanis.cool/cosmos/beta][Cosmos]]
 [[https://ryanis.cool/cosmos/beta#cm:CpgBCg8SBRCAPyAnEgASABIAODsKDxIFEIBLICcSABIAEgA4JwocEgUQgFcgJxIAEgASAxCwLxIDELBfOBNAgPC8AgoXEgUQgGMgJxIAEgASAxCwOxIDELBrOAAKFRIFEIBvICcSABIAEgA4FECAhorABwoXEgIgJxIAEgMQoE4SAhAwOChAgIaKwAcYAEC6iaCu8FVI3JC6oAIKbgoXEhMQwIACQJeMoAJI3YWQ3bDXEVBDOAgKGBIQEEBAgIAgSJyX2NawsgNQCzCAIFCeAgoWEhEQQECAgPgBSLSJgOzwsBBQV1CXARgCIg0IyAEQyAEYACAAKIgOMIAoQMuLlKXQMUitkdyNwZMGIgMghAeCAQkEAJMFZFoyAAJYSGADcgc4CkAUcJIJeJCH3IzRN/IBAggB][Pacane]]
 *** https://www.reddit.com/r/ErgoMechKeyboards/
@@ -78,11 +78,11 @@
 [[file:pro micro.png]]
 [[https://pcbheaven.com/wikipages/How_Key_Matrices_Works/][Matrice]]
 [[file:matrix-1.gif][Matrice 1]]
-*** Équipement requis
-**** Fer à souder
-**** Fil d'étain
-**** Pinces tweezers
-**** Imprimante 3D (optionnel)
+*** Équipement
+- Fer à souder
+- Fil d'étain
+- Pinces tweezers
+- Imprimante 3D (optionnel)
 *** Composantes
 **** Contrôleur
 [[file:pro micro.png]]
@@ -91,6 +91,7 @@
 **** Switches
 [[file:choc v1.webp]]
 [[file:cherry switch.jpg]]
+[[file:keychron low profile gateron.webp]]
 **** Keycaps
 [[file:choc keycaps.jpg]]
 **** Sockets
