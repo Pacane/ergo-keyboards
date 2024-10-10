@@ -187,3 +187,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ** Alternance au travail pour productivité
 ** Coût
 ** Temps
+
+#+BEGIN_SRC emacs-lisp
+(setq mode-line-format nil)
+(define-key org-mode-map (kbd "RET") 'open-image-presentation)
+#+END_SRC
