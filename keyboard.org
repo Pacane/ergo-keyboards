@@ -6,7 +6,7 @@
 * Un clavier ergonomique?
 - Qui réduit la "ulnar deviation"
 - Qui réduit l'angulation arrière des poignets
-- Qui réduit la pronation des avant-bras
+- Qui réduit la pronation des avant-bras "radial deviation"
 - Qui permet d'ajuster la posture
 - Qui permet de réduire les mouvements
 * Par où commencer?
@@ -117,6 +117,7 @@ Low/High profile
 - Batteries
 - Toggle switch
 - Bouton reset
+- Jack TRRS
 *** Où trouver les composantes?
 - JCLPCB
 - PCBWay
