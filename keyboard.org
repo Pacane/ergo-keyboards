@@ -12,7 +12,7 @@
 * Par où commencer?
 * Les bonnes questions à se poser
 ** Split/Unibody
-[[file:keychron alice.webp]]
+[[file:keychron-alice.webp]]
 ** Profil du clavier
 Low/High profile
 ** Type de touches / switches
@@ -20,13 +20,13 @@ Low/High profile
 - Hot swap?
 ** Layout
 *** Row staggered
-[[file:row staggered.jpg]]
+[[file:row-staggered.jpg]]
 *** Ortholinear
 [[file:ortho.jpg]]
 *** Column staggered
 [[file:voyager.png]]
 *** Aggressivité du layout
-[[file:cantor keyboard.webp]]
+[[file:cantor-keyboard.webp]]
 ** Avec ou sans fil
 ** Firmware désiré
 - QMK
@@ -38,26 +38,26 @@ Low/High profile
 * Le marché ressemble à quoi?
 ** Commercial
 *** Microsoft Natural Ergonomic Keyboard 4000
-[[file:microsoft natural ergo.png]]
+[[file:microsoft-natural-ergo.png]]
 *** ZSA
 - Voyager
 [[file:./voyager.png]] 
 - Moonlander
 [[file:./moonlander.jpg]] 
 - Ergodox
-[[file:ergodox ez.webp]]
+[[file:ergodox-ez.webp]]
 *** MoErgo Glove80
 [[file:glove80.jpg]]
 *** Kinesis
 - Advantage 360
-[[file:advantage pro 360.jpg]]
+[[file:advantage-pro-360.jpg]]
 - Advantage 2
-[[file:advantage 2.jpg]]
+[[file:advantage-2.jpg]]
 *** Dygma
 - Raise
-[[file:dygma raise.webp]]
+[[file:dygma-raise.webp]]
 - Defy
-[[file:dygma defy.jpg]]
+[[file:dygma-defy.jpg]]
 ** DIY
 *** Corne
 [[file:corne.jpg]]
@@ -67,7 +67,7 @@ Low/High profile
 [[file:cheapinov2.jpg]]
 *** Dactyl
 - Manuform
-[[file:dactyl manuform.jpg]]
+[[file:dactyl-manuform.jpg]]
 - Cygnus
 [[file:cygnus.jpg]]
 - Charybdis
@@ -79,7 +79,7 @@ Low/High profile
 * Faire son propre clavier
 ** Comment ça marche?
 *** Grid
-[[file:pro micro.png]]
+[[file:pro-micro.png]]
 [[https://pcbheaven.com/wikipages/How_Key_Matrices_Works/][Matrice]]
 [[file:matrix-1.gif][Matrice 1]]
 *** Équipement
@@ -90,27 +90,27 @@ Low/High profile
 - Imprimante 3D (optionnel)
 *** Composantes
 **** Contrôleur
-[[file:pro micro.png]]
+[[file:pro-micro.png]]
 **** Plates/Case
-[[file:corne plate.jpg]]
+[[file:corne-plate.jpg]]
 **** Switches
-[[file:choc v1.webp]]
-[[file:cherry switch.jpg]]
-[[file:keychron low profile gateron.webp]]
+[[file:choc-v1.webp]]
+[[file:cherry-switch.jpg]]
+[[file:keychron-low-profile-gateron.webp]]
 **** Keycaps
-[[file:choc keycaps.jpg]]
+[[file:choc-keycaps.jpg]]
 **** Switch sockets
-[[file:kailh hot swap.webp]]
+[[file:kailh-hot-swap.webp]]
 **** Diodes
-[[file:smd diode.jpg]]
-[[file:through hole diodes.jpg]]
-[[file:through hole diode corne.jpg]]
-[[file:smd diode corne.jpg]]
+[[file:smd-diode.jpg]]
+[[file:through-hole-diodes.jpg]]
+[[file:through-hole-diode-corne.jpg]]
+[[file:smd-diode-corne.jpg]]
 **** LEDs
-[[file:per key led.avif]]
-[[file:underglow led.png]]
+[[file:per-key-led.avif]]
+[[file:underglow-led.png]]
 **** PCBs
-[[file:corne pcb.jpg]]
+[[file:corne-pcb.jpg]]
 [[file:amoeba-kings.webp]]
 [[file:pcball.jpg]]
 **** Autres
@@ -180,7 +180,7 @@ Split vs non-split
 - On amène les touches aux doigts et non les doigts aux touches.
 - 34 touches?
 - Français?
-  [[file:ferris sweep.webp]]
+  [[file:ferris-sweep.webp]]
 ***** Fonctionalités pour aider au minimalisme
 - Hold Tap
 - Mod Tap
