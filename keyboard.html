@@ -1,849 +1,719 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2024-10-08 Tue 22:25 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
-<meta name="author" content="Joel" />
-<meta name="generator" content="Org Mode" />
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="Joel"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
 <style type="text/css">
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
+.underline { text-decoration: underline; }
 </style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
 </head>
 <body>
-<div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2 class="author">Joel</h2><p class="date">Created: 2024-10-25 Fri 12:49</p>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org02fa217">1. Pourquoi?</a></li>
-<li><a href="#orgbead68a">2. Un clavier ergonomique?</a></li>
-<li><a href="#org3412463">3. Par où commencer?</a></li>
-<li><a href="#org8c08e8c">4. Les bonnes questions à se poser</a>
+<li><a href="#/slide-org70386d0">1. Le puits sans fond des claviers ergonomiques: comment créer son propre clavier</a></li>
+<li><a href="#/slide-org8ee3c4d">2. Pourquoi?</a></li>
+<li><a href="#/slide-org863ffcf">3. Un clavier ergonomique?</a></li>
+<li><a href="#/slide-org540b3ae">4. Par où commencer?</a></li>
+<li><a href="#/slide-orga023e82">5. Les bonnes questions à se poser</a>
 <ul>
-<li><a href="#org740745b">4.1. Split/Unibody</a></li>
-<li><a href="#orge06e2ba">4.2. Profil du clavier</a></li>
-<li><a href="#org0433f27">4.3. Type de touches / switches</a>
+<li><a href="#/slide-orgf4a6da8">5.1. Split/Unibody</a></li>
+<li><a href="#/slide-org6ba4d81">5.2. Profil du clavier</a></li>
+<li><a href="#/slide-orgc93fcea">5.3. Type de touches / switches</a></li>
+<li><a href="#/slide-org506da41">5.4. Layout</a>
 <ul>
-<li><a href="#org13412e5">4.3.1. MX/Choc/Gateron</a></li>
+<li><a href="#/slide-orga22ea81">5.4.1. Row staggered</a></li>
+<li><a href="#/slide-org44318ff">5.4.2. Ortholinear</a></li>
+<li><a href="#/slide-orgce0a580">5.4.3. Column staggered</a></li>
+<li><a href="#/slide-org0e2b1e0">5.4.4. Aggressivité du layout</a></li>
 </ul>
 </li>
-<li><a href="#orgbc99dba">4.4. Layout</a>
-<ul>
-<li><a href="#org32c9146">4.4.1. Row staggered</a></li>
-<li><a href="#orgadf21a7">4.4.2. Ortholinear</a></li>
-<li><a href="#org6343724">4.4.3. Column staggered</a></li>
-<li><a href="#org88670bf">4.4.4. Aggressivité du layout</a></li>
+<li><a href="#/slide-org9369bef">5.5. Avec ou sans fil</a></li>
+<li><a href="#/slide-org736a999">5.6. Firmware désiré</a></li>
+<li><a href="#/slide-org9338eaa">5.7. DIY?</a></li>
 </ul>
 </li>
-<li><a href="#org5fe5ea2">4.5. Filaire ou non</a></li>
-<li><a href="#orgf24f481">4.6. Firmware désiré</a>
+<li><a href="#/slide-org32484cf">6. Le marché ressemble à quoi?</a>
 <ul>
-<li><a href="#orge5204e3">4.6.1. QMK</a></li>
-<li><a href="#org6369614">4.6.2. ZMK</a></li>
-<li><a href="#org8d9a3e9">4.6.3. KMK</a></li>
-<li><a href="#orgf5f8c19">4.6.4. etc</a></li>
+<li><a href="#/slide-org83091b0">6.1. Commercial</a>
+<ul>
+<li><a href="#/slide-org5870aaf">6.1.1. Microsoft Natural Ergonomic Keyboard 4000</a></li>
+<li><a href="#/slide-org44f0279">6.1.2. ZSA</a></li>
+<li><a href="#/slide-orge13f938">6.1.3. MoErgo Glove80</a></li>
+<li><a href="#/slide-org52436f6">6.1.4. Kinesis</a></li>
+<li><a href="#/slide-org812b521">6.1.5. Dygma</a></li>
 </ul>
 </li>
-<li><a href="#orgd57f814">4.7. DIY?</a>
+<li><a href="#/slide-orgaf2cb84">6.2. DIY</a>
 <ul>
-<li><a href="#org487daa7">4.7.1. Soudure</a></li>
-<li><a href="#org2271bb2">4.7.2. Hot swap</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org4906369">5. Le marché ressemble à quoi?</a>
-<ul>
-<li><a href="#org68a284c">5.1. Commercial</a>
-<ul>
-<li><a href="#orgb42d6f6">5.1.1. Microsoft Natural Ergonomic Keyboard 4000</a></li>
-<li><a href="#orgdee9b75">5.1.2. ZSA</a></li>
-<li><a href="#org09bbf01">5.1.3. MoErgo Glove80</a></li>
-<li><a href="#org4764d44">5.1.4. Kinesis</a></li>
-<li><a href="#orgb515188">5.1.5. Dygma</a></li>
-</ul>
-</li>
-<li><a href="#org5ac7918">5.2. DIY</a>
-<ul>
-<li><a href="#orgdfb97e9">5.2.1. Corne</a></li>
-<li><a href="#org695ea1a">5.2.2. Lily58</a></li>
-<li><a href="#orgf5a2b9c">5.2.3. Cheapino</a></li>
-<li><a href="#org3fa03b0">5.2.4. Dactyl</a></li>
-<li><a href="#orgb2312db">5.2.5. https://www.reddit.com/r/ErgoMechKeyboards/</a></li>
+<li><a href="#/slide-org7c43ca2">6.2.1. Corne</a></li>
+<li><a href="#/slide-org565361e">6.2.2. Lily58</a></li>
+<li><a href="#/slide-org9a2be52">6.2.3. Cheapino</a></li>
+<li><a href="#/slide-org007e6c2">6.2.4. Dactyl</a></li>
+<li><a href="#/slide-org89a6eb8">6.2.5. https://www.reddit.com/r/ErgoMechKeyboards/</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgee62c46">6. Faire son propre clavier</a>
+<li><a href="#/slide-org1ed69ae">7. Faire son propre clavier</a>
 <ul>
-<li><a href="#org572de80">6.1. Comment ça marche?</a>
+<li><a href="#/slide-orge4b3674">7.1. Comment ça marche?</a>
 <ul>
-<li><a href="#org89f1edf">6.1.1. Grid</a></li>
-<li><a href="#orgb1114f4">6.1.2. Équipement requis</a></li>
-<li><a href="#org3cf29fc">6.1.3. Composantes</a></li>
-<li><a href="#orgb64fd5d">6.1.4. Où trouver les composantes?</a></li>
-<li><a href="#org2205cbc">6.1.5. PCB vs filé à la main</a></li>
+<li><a href="#/slide-org6beada8">7.1.1. Grid</a></li>
+<li><a href="#/slide-org55269e2">7.1.2. Équipement</a></li>
+<li><a href="#/slide-org881d790">7.1.3. Composantes</a></li>
+<li><a href="#/slide-org978837e">7.1.4. Où trouver les composantes?</a></li>
+<li><a href="#/slide-org728b1d3">7.1.5. PCB vs filé à la main</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org3f834fa">7. Configuration</a>
+<li><a href="#/slide-org8d7b737">8. Configuration</a>
 <ul>
-<li><a href="#org4d024c6">7.1. Flash firmware</a></li>
-<li><a href="#org674083d">7.2. Features</a></li>
+<li><a href="#/slide-org97529c6">8.1. Flash firmware</a>
+<ul>
+<li><a href="#/slide-org74409bc">8.1.1. QMK</a></li>
+<li><a href="#/slide-org7c749d2">8.1.2. ZMK</a></li>
 </ul>
 </li>
-<li><a href="#org5665e64">8. Considérations</a>
-<ul>
-<li><a href="#orge07f99c">8.1. Adaptation</a>
-<ul>
-<li><a href="#orgd72bb92">8.1.1. Espace mental</a></li>
-<li><a href="#org1a41490">8.1.2. Layouts alternatifs</a></li>
+<li><a href="#/slide-orgc65bb25">8.2. Features</a></li>
+<li><a href="#/slide-org532d249">8.3. Keymap</a></li>
 </ul>
 </li>
-<li><a href="#orgb286ef9">8.2. Pratique</a>
+<li><a href="#/slide-org204048b">9. Considérations</a>
 <ul>
-<li><a href="#org7635882">8.2.1. Keybr</a></li>
-<li><a href="#orgebbf50f">8.2.2. Monkeytype</a></li>
-<li><a href="#org9b6ae1e">8.2.3. Autres jeux</a></li>
-<li><a href="#orge24f469">8.2.4. Coder</a></li>
+<li><a href="#/slide-org75a5578">9.1. Adaptation</a>
+<ul>
+<li><a href="#/slide-orgd8e787a">9.1.1. Espace mental</a></li>
+<li><a href="#/slide-orgc718206">9.1.2. Layouts alternatifs</a></li>
+<li><a href="#/slide-orgdcfb6a1">9.1.3. Pratique</a></li>
 </ul>
 </li>
-<li><a href="#org52afb0f">8.3. Alternance au travail pour productivité</a></li>
-<li><a href="#org2a1efc9">8.4. Coût</a></li>
-<li><a href="#orgd718408">8.5. Temps</a></li>
+<li><a href="#/slide-orgfb52ac6">9.2. Alternance au travail pour productivité</a></li>
+<li><a href="#/slide-org344bb32">9.3. Coût</a></li>
+<li><a href="#/slide-orgc82880f">9.4. Temps</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org02fa217" class="outline-2">
-<h2 id="org02fa217"><span class="section-number-2">1.</span> Pourquoi?</h2>
-<div class="outline-text-2" id="text-1">
-<ul class="org-ul">
+</section>
+<section>
+<section id="slide-org70386d0">
+<h2 id="org70386d0"><span class="section-number-2">1.</span> Le puits sans fond des claviers ergonomiques: comment créer son propre clavier</h2>
+</section>
+</section>
+<section>
+<section id="slide-org8ee3c4d">
+<h2 id="org8ee3c4d"><span class="section-number-2">2.</span> Pourquoi?</h2>
+<ul>
 <li>Douleurs reliées à la posture</li>
 <li>Douleurs reliées aux répétitions (RSI)</li>
 <li>Pour le plaisir</li>
+
 </ul>
-</div>
-</div>
-<div id="outline-container-orgbead68a" class="outline-2">
-<h2 id="orgbead68a"><span class="section-number-2">2.</span> Un clavier ergonomique?</h2>
-<div class="outline-text-2" id="text-2">
-<ul class="org-ul">
+</section>
+</section>
+<section>
+<section id="slide-org863ffcf">
+<h2 id="org863ffcf"><span class="section-number-2">3.</span> Un clavier ergonomique?</h2>
+<ul>
 <li>Qui réduit la "ulnar deviation"</li>
 <li>Qui réduit l'angulation arrière des poignets</li>
+<li>Qui réduit la pronation des avant-bras "radial deviation"</li>
 <li>Qui permet d'ajuster la posture</li>
 <li>Qui permet de réduire les mouvements</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org3412463" class="outline-2">
-<h2 id="org3412463"><span class="section-number-2">3.</span> Par où commencer?</h2>
-</div>
-<div id="outline-container-org8c08e8c" class="outline-2">
-<h2 id="org8c08e8c"><span class="section-number-2">4.</span> Les bonnes questions à se poser</h2>
-<div class="outline-text-2" id="text-4">
-</div>
-<div id="outline-container-org740745b" class="outline-3">
-<h3 id="org740745b"><span class="section-number-3">4.1.</span> Split/Unibody</h3>
-<div class="outline-text-3" id="text-4-1">
 
-<div id="org359727d" class="figure">
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org540b3ae">
+<h2 id="org540b3ae"><span class="section-number-2">4.</span> Par où commencer?</h2>
+</section>
+</section>
+<section>
+<section id="slide-orga023e82">
+<h2 id="orga023e82"><span class="section-number-2">5.</span> Les bonnes questions à se poser</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+</section>
+<section id="slide-orgf4a6da8">
+<h3 id="orgf4a6da8"><span class="section-number-3">5.1.</span> Split/Unibody</h3>
+
+<div id="org173d3fc" class="figure">
 <p><img src="keychron alice.webp" alt="keychron alice.webp" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-orge06e2ba" class="outline-3">
-<h3 id="orge06e2ba"><span class="section-number-3">4.2.</span> Profil du clavier</h3>
-</div>
-<div id="outline-container-org0433f27" class="outline-3">
-<h3 id="org0433f27"><span class="section-number-3">4.3.</span> Type de touches / switches</h3>
-<div class="outline-text-3" id="text-4-3">
-</div>
-<div id="outline-container-org13412e5" class="outline-4">
-<h4 id="org13412e5"><span class="section-number-4">4.3.1.</span> MX/Choc/Gateron</h4>
-</div>
-</div>
-<div id="outline-container-orgbc99dba" class="outline-3">
-<h3 id="orgbc99dba"><span class="section-number-3">4.4.</span> Layout</h3>
-<div class="outline-text-3" id="text-4-4">
-</div>
-<div id="outline-container-org32c9146" class="outline-4">
-<h4 id="org32c9146"><span class="section-number-4">4.4.1.</span> Row staggered</h4>
-</div>
-<div id="outline-container-orgadf21a7" class="outline-4">
-<h4 id="orgadf21a7"><span class="section-number-4">4.4.2.</span> Ortholinear</h4>
-<div class="outline-text-4" id="text-4-4-2">
+</section>
+<section id="slide-org6ba4d81">
+<h3 id="org6ba4d81"><span class="section-number-3">5.2.</span> Profil du clavier</h3>
+<p>
+Low/High profile
+</p>
+</section>
+<section id="slide-orgc93fcea">
+<h3 id="orgc93fcea"><span class="section-number-3">5.3.</span> Type de touches / switches</h3>
+<ul>
+<li>MX/Choc/Gateron</li>
+<li>Hot swap?</li>
 
-<div id="org7d60101" class="figure">
-<p><img src="staggered vs ortho.jpg" alt="staggered vs ortho.jpg" />
+</ul>
+</section>
+<section id="slide-org506da41">
+<h3 id="org506da41"><span class="section-number-3">5.4.</span> Layout</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+</section>
+<section id="slide-orga22ea81">
+<h4 id="orga22ea81"><span class="section-number-4">5.4.1.</span> Row staggered</h4>
+
+<div id="orgc0b8238" class="figure">
+<p><img src="row staggered.jpg" alt="row staggered.jpg" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-org6343724" class="outline-4">
-<h4 id="org6343724"><span class="section-number-4">4.4.3.</span> Column staggered</h4>
-<div class="outline-text-4" id="text-4-4-3">
+</section>
+<section id="slide-org44318ff">
+<h4 id="org44318ff"><span class="section-number-4">5.4.2.</span> Ortholinear</h4>
 
-<div id="org4d385f8" class="figure">
+<div id="org1cecc42" class="figure">
+<p><img src="ortho.jpg" alt="ortho.jpg" />
+</p>
+</div>
+</section>
+<section id="slide-orgce0a580">
+<h4 id="orgce0a580"><span class="section-number-4">5.4.3.</span> Column staggered</h4>
+
+<div id="org5d4c857" class="figure">
 <p><img src="voyager.png" alt="voyager.png" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-org88670bf" class="outline-4">
-<h4 id="org88670bf"><span class="section-number-4">4.4.4.</span> Aggressivité du layout</h4>
-<div class="outline-text-4" id="text-4-4-4">
+</section>
+<section id="slide-org0e2b1e0">
+<h4 id="org0e2b1e0"><span class="section-number-4">5.4.4.</span> Aggressivité du layout</h4>
 
-<div id="orgfa28170" class="figure">
+<div id="orge1a5beb" class="figure">
 <p><img src="cantor keyboard.webp" alt="cantor keyboard.webp" />
 </p>
 </div>
-</div>
-</div>
-</div>
-<div id="outline-container-org5fe5ea2" class="outline-3">
-<h3 id="org5fe5ea2"><span class="section-number-3">4.5.</span> Filaire ou non</h3>
-</div>
-<div id="outline-container-orgf24f481" class="outline-3">
-<h3 id="orgf24f481"><span class="section-number-3">4.6.</span> Firmware désiré</h3>
-<div class="outline-text-3" id="text-4-6">
-</div>
-<div id="outline-container-orge5204e3" class="outline-4">
-<h4 id="orge5204e3"><span class="section-number-4">4.6.1.</span> QMK</h4>
-</div>
-<div id="outline-container-org6369614" class="outline-4">
-<h4 id="org6369614"><span class="section-number-4">4.6.2.</span> ZMK</h4>
-</div>
-<div id="outline-container-org8d9a3e9" class="outline-4">
-<h4 id="org8d9a3e9"><span class="section-number-4">4.6.3.</span> KMK</h4>
-</div>
-<div id="outline-container-orgf5f8c19" class="outline-4">
-<h4 id="orgf5f8c19"><span class="section-number-4">4.6.4.</span> etc</h4>
-</div>
-</div>
-<div id="outline-container-orgd57f814" class="outline-3">
-<h3 id="orgd57f814"><span class="section-number-3">4.7.</span> DIY?</h3>
-<div class="outline-text-3" id="text-4-7">
-</div>
-<div id="outline-container-org487daa7" class="outline-4">
-<h4 id="org487daa7"><span class="section-number-4">4.7.1.</span> Soudure</h4>
-</div>
-<div id="outline-container-org2271bb2" class="outline-4">
-<h4 id="org2271bb2"><span class="section-number-4">4.7.2.</span> Hot swap</h4>
-</div>
-</div>
-</div>
-<div id="outline-container-org4906369" class="outline-2">
-<h2 id="org4906369"><span class="section-number-2">5.</span> Le marché ressemble à quoi?</h2>
-<div class="outline-text-2" id="text-5">
-</div>
-<div id="outline-container-org68a284c" class="outline-3">
-<h3 id="org68a284c"><span class="section-number-3">5.1.</span> Commercial</h3>
-<div class="outline-text-3" id="text-5-1">
-</div>
-<div id="outline-container-orgb42d6f6" class="outline-4">
-<h4 id="orgb42d6f6"><span class="section-number-4">5.1.1.</span> Microsoft Natural Ergonomic Keyboard 4000</h4>
-<div class="outline-text-4" id="text-5-1-1">
+</section>
+<section id="slide-org9369bef">
+<h3 id="org9369bef"><span class="section-number-3">5.5.</span> Avec ou sans fil</h3>
+</section>
+<section id="slide-org736a999">
+<h3 id="org736a999"><span class="section-number-3">5.6.</span> Firmware désiré</h3>
+<ul>
+<li>QMK</li>
+<li>ZMK</li>
+<li>KMK</li>
 
-<div id="orgc34b4d8" class="figure">
+</ul>
+</section>
+<section id="slide-org9338eaa">
+<h3 id="org9338eaa"><span class="section-number-3">5.7.</span> DIY?</h3>
+<ul>
+<li>Soudure</li>
+<li>Hot swap</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org32484cf">
+<h2 id="org32484cf"><span class="section-number-2">6.</span> Le marché ressemble à quoi?</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+</section>
+<section id="slide-org83091b0">
+<h3 id="org83091b0"><span class="section-number-3">6.1.</span> Commercial</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+</section>
+<section id="slide-org5870aaf">
+<h4 id="org5870aaf"><span class="section-number-4">6.1.1.</span> Microsoft Natural Ergonomic Keyboard 4000</h4>
+
+<div id="org1362edc" class="figure">
 <p><img src="microsoft natural ergo.png" alt="microsoft natural ergo.png" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-orgdee9b75" class="outline-4">
-<h4 id="orgdee9b75"><span class="section-number-4">5.1.2.</span> ZSA</h4>
-<div class="outline-text-4" id="text-5-1-2">
-</div>
-<ol class="org-ol">
-<li><a id="org7c0f98a"></a>Voyager<br />
-<div class="outline-text-5" id="text-5-1-2-1">
+</section>
+<section id="slide-org44f0279">
+<h4 id="org44f0279"><span class="section-number-4">6.1.2.</span> ZSA</h4>
+<ul>
+<li>Voyager</li>
 
-<div id="org7371624" class="figure">
+</ul>
+
+<div id="org94fa557" class="figure">
 <p><img src="./voyager.png" alt="voyager.png" /> 
 </p>
 </div>
-</div>
-</li>
-<li><a id="org60630e2"></a>Moonlander<br />
-<div class="outline-text-5" id="text-5-1-2-2">
+<ul>
+<li>Moonlander</li>
 
-<div id="orga5697bf" class="figure">
+</ul>
+
+<div id="org3370326" class="figure">
 <p><img src="./moonlander.jpg" alt="moonlander.jpg" /> 
 </p>
 </div>
-</div>
-</li>
-<li><a id="org0ee1658"></a>Ergodox<br />
-<div class="outline-text-5" id="text-5-1-2-3">
+<ul>
+<li>Ergodox</li>
 
-<div id="orgbbc1473" class="figure">
+</ul>
+
+<div id="org348bec6" class="figure">
 <p><img src="ergodox ez.webp" alt="ergodox ez.webp" />
 </p>
 </div>
-</div>
-</li>
-</ol>
-</div>
-<div id="outline-container-org09bbf01" class="outline-4">
-<h4 id="org09bbf01"><span class="section-number-4">5.1.3.</span> MoErgo Glove80</h4>
-<div class="outline-text-4" id="text-5-1-3">
+</section>
+<section id="slide-orge13f938">
+<h4 id="orge13f938"><span class="section-number-4">6.1.3.</span> MoErgo Glove80</h4>
 
-<div id="orga91eca2" class="figure">
+<div id="orgfff168a" class="figure">
 <p><img src="glove80.jpg" alt="glove80.jpg" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-org4764d44" class="outline-4">
-<h4 id="org4764d44"><span class="section-number-4">5.1.4.</span> Kinesis</h4>
-<div class="outline-text-4" id="text-5-1-4">
-</div>
-<ol class="org-ol">
-<li><a id="org0f4b4c7"></a>Advantage 360<br />
-<div class="outline-text-5" id="text-5-1-4-1">
+</section>
+<section id="slide-org52436f6">
+<h4 id="org52436f6"><span class="section-number-4">6.1.4.</span> Kinesis</h4>
+<ul>
+<li>Advantage 360</li>
 
-<div id="org3029eab" class="figure">
+</ul>
+
+<div id="org1d3ddd2" class="figure">
 <p><img src="advantage pro 360.jpg" alt="advantage pro 360.jpg" />
 </p>
 </div>
-</div>
-</li>
-<li><a id="org6826344"></a>Advantage 2<br />
-<div class="outline-text-5" id="text-5-1-4-2">
+<ul>
+<li>Advantage 2</li>
 
-<div id="org9609a9d" class="figure">
+</ul>
+
+<div id="org7f4448d" class="figure">
 <p><img src="advantage 2.jpg" alt="advantage 2.jpg" />
 </p>
 </div>
-</div>
-</li>
-</ol>
-</div>
-<div id="outline-container-orgb515188" class="outline-4">
-<h4 id="orgb515188"><span class="section-number-4">5.1.5.</span> Dygma</h4>
-<div class="outline-text-4" id="text-5-1-5">
-</div>
-<ol class="org-ol">
-<li><a id="orgd5e2dfd"></a>Raise<br /></li>
-<li><a id="org8daca53"></a>Defy<br /></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-org5ac7918" class="outline-3">
-<h3 id="org5ac7918"><span class="section-number-3">5.2.</span> DIY</h3>
-<div class="outline-text-3" id="text-5-2">
-</div>
-<div id="outline-container-orgdfb97e9" class="outline-4">
-<h4 id="orgdfb97e9"><span class="section-number-4">5.2.1.</span> Corne</h4>
-<div class="outline-text-4" id="text-5-2-1">
+</section>
+<section id="slide-org812b521">
+<h4 id="org812b521"><span class="section-number-4">6.1.5.</span> Dygma</h4>
+<ul>
+<li>Raise</li>
 
-<div id="org5a20047" class="figure">
+</ul>
+
+<div id="orgd53117c" class="figure">
+<p><img src="dygma raise.webp" alt="dygma raise.webp" />
+</p>
+</div>
+<ul>
+<li>Defy</li>
+
+</ul>
+
+<div id="orgec9964e" class="figure">
+<p><img src="dygma defy.jpg" alt="dygma defy.jpg" />
+</p>
+</div>
+</section>
+<section id="slide-orgaf2cb84">
+<h3 id="orgaf2cb84"><span class="section-number-3">6.2.</span> DIY</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+</section>
+<section id="slide-org7c43ca2">
+<h4 id="org7c43ca2"><span class="section-number-4">6.2.1.</span> Corne</h4>
+
+<div id="orgeb9e124" class="figure">
 <p><img src="corne.jpg" alt="corne.jpg" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-org695ea1a" class="outline-4">
-<h4 id="org695ea1a"><span class="section-number-4">5.2.2.</span> Lily58</h4>
-<div class="outline-text-4" id="text-5-2-2">
+</section>
+<section id="slide-org565361e">
+<h4 id="org565361e"><span class="section-number-4">6.2.2.</span> Lily58</h4>
 
-<div id="orgbd89463" class="figure">
+<div id="org2db30e1" class="figure">
 <p><img src="lily58.jpg" alt="lily58.jpg" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-orgf5a2b9c" class="outline-4">
-<h4 id="orgf5a2b9c"><span class="section-number-4">5.2.3.</span> Cheapino</h4>
-<div class="outline-text-4" id="text-5-2-3">
+</section>
+<section id="slide-org9a2be52">
+<h4 id="org9a2be52"><span class="section-number-4">6.2.3.</span> Cheapino</h4>
 
-<div id="org2ff58b1" class="figure">
+<div id="orge3d0acd" class="figure">
 <p><img src="cheapinov2.jpg" alt="cheapinov2.jpg" />
 </p>
 </div>
-</div>
-</div>
-<div id="outline-container-org3fa03b0" class="outline-4">
-<h4 id="org3fa03b0"><span class="section-number-4">5.2.4.</span> Dactyl</h4>
-<div class="outline-text-4" id="text-5-2-4">
-</div>
-<ol class="org-ol">
-<li><a id="org1a02013"></a>Manuform<br />
-<div class="outline-text-5" id="text-5-2-4-1">
+</section>
+<section id="slide-org007e6c2">
+<h4 id="org007e6c2"><span class="section-number-4">6.2.4.</span> Dactyl</h4>
+<ul>
+<li>Manuform</li>
 
-<div id="org0969d4a" class="figure">
+</ul>
+
+<div id="orgef51974" class="figure">
 <p><img src="dactyl manuform.jpg" alt="dactyl manuform.jpg" />
 </p>
 </div>
-</div>
-</li>
-<li><a id="orgd9f8c71"></a>Cygnus<br />
-<div class="outline-text-5" id="text-5-2-4-2">
+<ul>
+<li>Cygnus</li>
 
-<div id="org767c838" class="figure">
+</ul>
+
+<div id="orgdf5cb4a" class="figure">
 <p><img src="cygnus.jpg" alt="cygnus.jpg" />
 </p>
 </div>
-</div>
-</li>
-<li><a id="orgc16225e"></a>Charybdis<br />
-<div class="outline-text-5" id="text-5-2-4-3">
+<ul>
+<li>Charybdis</li>
 
-<div id="org9614e9a" class="figure">
+</ul>
+
+<div id="orge7817de" class="figure">
 <p><img src="charybdis.jpg" alt="charybdis.jpg" />
 </p>
 </div>
-</div>
-</li>
-<li><a id="org40f4da1"></a>Custom!<br />
-<div class="outline-text-5" id="text-5-2-4-4">
+<ul>
+<li>Custom!</li>
+
+</ul>
 <p>
 <a href="https://ryanis.cool/cosmos/beta">Cosmos</a>
 <a href="https://ryanis.cool/cosmos/beta#cm:CpgBCg8SBRCAPyAnEgASABIAODsKDxIFEIBLICcSABIAEgA4JwocEgUQgFcgJxIAEgASAxCwLxIDELBfOBNAgPC8AgoXEgUQgGMgJxIAEgASAxCwOxIDELBrOAAKFRIFEIBvICcSABIAEgA4FECAhorABwoXEgIgJxIAEgMQoE4SAhAwOChAgIaKwAcYAEC6iaCu8FVI3JC6oAIKbgoXEhMQwIACQJeMoAJI3YWQ3bDXEVBDOAgKGBIQEEBAgIAgSJyX2NawsgNQCzCAIFCeAgoWEhEQQECAgPgBSLSJgOzwsBBQV1CXARgCIg0IyAEQyAEYACAAKIgOMIAoQMuLlKXQMUitkdyNwZMGIgMghAeCAQkEAJMFZFoyAAJYSGADcgc4CkAUcJIJeJCH3IzRN/IBAggB">Pacane</a>
 </p>
+</section>
+<section id="slide-org89a6eb8">
+<h4 id="org89a6eb8"><span class="section-number-4">6.2.5.</span> <a href="https://www.reddit.com/r/ErgoMechKeyboards/">https://www.reddit.com/r/ErgoMechKeyboards/</a></h4>
+</section>
+</section>
+<section>
+<section id="slide-org1ed69ae">
+<h2 id="org1ed69ae"><span class="section-number-2">7.</span> Faire son propre clavier</h2>
+<div class="outline-text-2" id="text-7">
 </div>
-</li>
-</ol>
+</section>
+<section id="slide-orge4b3674">
+<h3 id="orge4b3674"><span class="section-number-3">7.1.</span> Comment ça marche?</h3>
+<div class="outline-text-3" id="text-7-1">
 </div>
-<div id="outline-container-orgb2312db" class="outline-4">
-<h4 id="orgb2312db"><span class="section-number-4">5.2.5.</span> <a href="https://www.reddit.com/r/ErgoMechKeyboards/">https://www.reddit.com/r/ErgoMechKeyboards/</a></h4>
-</div>
-</div>
-</div>
-<div id="outline-container-orgee62c46" class="outline-2">
-<h2 id="orgee62c46"><span class="section-number-2">6.</span> Faire son propre clavier</h2>
-<div class="outline-text-2" id="text-6">
-</div>
-<div id="outline-container-org572de80" class="outline-3">
-<h3 id="org572de80"><span class="section-number-3">6.1.</span> Comment ça marche?</h3>
-<div class="outline-text-3" id="text-6-1">
-</div>
-<div id="outline-container-org89f1edf" class="outline-4">
-<h4 id="org89f1edf"><span class="section-number-4">6.1.1.</span> Grid</h4>
-<div class="outline-text-4" id="text-6-1-1">
+</section>
+<section id="slide-org6beada8">
+<h4 id="org6beada8"><span class="section-number-4">7.1.1.</span> Grid</h4>
 <p>
+<img src="pro micro.png" alt="pro micro.png" />
 <a href="https://pcbheaven.com/wikipages/How_Key_Matrices_Works/">Matrice</a>
 <a href="matrix-1.gif">Matrice 1</a>
 </p>
-</div>
-</div>
-<div id="outline-container-orgb1114f4" class="outline-4">
-<h4 id="orgb1114f4"><span class="section-number-4">6.1.2.</span> Équipement requis</h4>
-<div class="outline-text-4" id="text-6-1-2">
-</div>
-<ol class="org-ol">
-<li><a id="org93adb12"></a>Fer à souder<br /></li>
-<li><a id="orgaa74d96"></a>Fil d'étain<br /></li>
-<li><a id="org93926f4"></a>Pinces tweezers<br /></li>
-<li><a id="org51fef4d"></a>Imprimante 3D (optionnel)<br /></li>
-</ol>
-</div>
-<div id="outline-container-org3cf29fc" class="outline-4">
-<h4 id="org3cf29fc"><span class="section-number-4">6.1.3.</span> Composantes</h4>
-<div class="outline-text-4" id="text-6-1-3">
-</div>
-<ol class="org-ol">
-<li><a id="org4be9ca1"></a>Contrôleur<br />
-<div class="outline-text-5" id="text-6-1-3-1">
+</section>
+<section id="slide-org55269e2">
+<h4 id="org55269e2"><span class="section-number-4">7.1.2.</span> Équipement</h4>
+<ul>
+<li>Fer à souder</li>
+<li>Fil d'étain</li>
+<li>Jump wires (si hand wired)</li>
+<li>Pinces tweezers</li>
+<li>Imprimante 3D (optionnel)</li>
 
-<div id="org898ab78" class="figure">
+</ul>
+</section>
+<section id="slide-org881d790">
+<h4 id="org881d790"><span class="section-number-4">7.1.3.</span> Composantes</h4>
+<div class="outline-text-4" id="text-7-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org573aae4"></a>Contrôleur<br />
+<div id="org7462f0f" class="figure">
 <p><img src="pro micro.png" alt="pro micro.png" />
 </p>
 </div>
-</div>
 </li>
-<li><a id="orgbd4c2f6"></a>Plates/Case<br />
-<div class="outline-text-5" id="text-6-1-3-2">
-
-<div id="org953478a" class="figure">
+<li><a id="org018e31e"></a>Plates/Case<br />
+<div id="org6a43539" class="figure">
 <p><img src="corne plate.jpg" alt="corne plate.jpg" />
 </p>
 </div>
-</div>
 </li>
-<li><a id="org7720f7f"></a>Switches<br />
-<div class="outline-text-5" id="text-6-1-3-3">
+<li><a id="org31448d4"></a>Switches<br />
 <p>
 <img src="choc v1.webp" alt="choc v1.webp" />
 <img src="cherry switch.jpg" alt="cherry switch.jpg" />
+<img src="keychron low profile gateron.webp" alt="keychron low profile gateron.webp" />
 </p>
-</div>
 </li>
-<li><a id="org6218956"></a>Keycaps<br />
-<div class="outline-text-5" id="text-6-1-3-4">
-
-<div id="org833ccc7" class="figure">
+<li><a id="org0fbdcb8"></a>Keycaps<br />
+<div id="org2ab7c28" class="figure">
 <p><img src="choc keycaps.jpg" alt="choc keycaps.jpg" />
 </p>
 </div>
-</div>
 </li>
-<li><a id="orga957f66"></a>Sockets<br />
-<div class="outline-text-5" id="text-6-1-3-5">
-
-<div id="org8f47047" class="figure">
+<li><a id="org0d2bdf9"></a>Switch sockets<br />
+<div id="org1058f32" class="figure">
 <p><img src="kailh hot swap.webp" alt="kailh hot swap.webp" />
 </p>
 </div>
-</div>
 </li>
-<li><a id="orgc469a7f"></a>Diodes<br />
-<div class="outline-text-5" id="text-6-1-3-6">
+<li><a id="org4e25586"></a>Diodes<br />
 <p>
 <img src="smd diode.jpg" alt="smd diode.jpg" />
 <img src="through hole diodes.jpg" alt="through hole diodes.jpg" />
 <img src="through hole diode corne.jpg" alt="through hole diode corne.jpg" />
 <img src="smd diode corne.jpg" alt="smd diode corne.jpg" />
 </p>
-</div>
 </li>
-<li><a id="org6adc2f1"></a>LEDs<br />
-<div class="outline-text-5" id="text-6-1-3-7">
+<li><a id="org86a5a3f"></a>LEDs<br />
 <p>
 <img src="per key led.avif" alt="per key led.avif" />
 <img src="underglow led.png" alt="underglow led.png" />
 </p>
-</div>
 </li>
-<li><a id="org73fd46e"></a>PCBs<br />
-<div class="outline-text-5" id="text-6-1-3-8">
+<li><a id="org696e680"></a>PCBs<br />
 <p>
 <img src="corne pcb.jpg" alt="corne pcb.jpg" />
 <img src="amoeba-kings.webp" alt="amoeba-kings.webp" />
 <img src="pcball.jpg" alt="pcball.jpg" />
 </p>
-</div>
+</li>
+<li><a id="org8270566"></a>Autres<br />
+<ul>
+<li>Batteries</li>
+<li>Toggle switch</li>
+<li>Bouton reset</li>
+<li>Jack TRRS</li>
+
+</ul>
 </li>
 </ol>
-</div>
-<div id="outline-container-orgb64fd5d" class="outline-4">
-<h4 id="orgb64fd5d"><span class="section-number-4">6.1.4.</span> Où trouver les composantes?</h4>
-<div class="outline-text-4" id="text-6-1-4">
-<ul class="org-ul">
+</section>
+<section id="slide-org978837e">
+<h4 id="org978837e"><span class="section-number-4">7.1.4.</span> Où trouver les composantes?</h4>
+<ul>
 <li>JCLPCB</li>
 <li>PCBWay</li>
 <li>AliExpress</li>
 <li>Amazons</li>
 <li>Mouser</li>
 <li>DigiKey</li>
+
 </ul>
-</div>
-</div>
-<div id="outline-container-org2205cbc" class="outline-4">
-<h4 id="org2205cbc"><span class="section-number-4">6.1.5.</span> PCB vs filé à la main</h4>
-<div class="outline-text-4" id="text-6-1-5">
+</section>
+<section id="slide-org728b1d3">
+<h4 id="org728b1d3"><span class="section-number-4">7.1.5.</span> PCB vs filé à la main</h4>
+<div class="outline-text-4" id="text-7-1-5">
 </div>
 <ol class="org-ol">
-<li><a id="org5aca4c0"></a>PCB<br />
-<div class="outline-text-5" id="text-6-1-5-1">
-<ul class="org-ul">
+<li><a id="org7e0db85"></a>PCB<br />
+<ul>
 <li>Plus facile</li>
 <li>Requiert plus de planification à l'avance</li>
 <li>KiCad</li>
+
 </ul>
-</div>
 </li>
-<li><a id="org8f0720a"></a>Filé à la main<br />
-<div class="outline-text-5" id="text-6-1-5-2">
-<ul class="org-ul">
+<li><a id="org8fabcb2"></a>Filé à la main<br />
+<ul>
 <li>Plus volumineux</li>
 <li>Plus flexible</li>
 <li>Plus long/difficile</li>
 <li>Single switch PCB</li>
+
 </ul>
-</div>
 </li>
 </ol>
+</section>
+</section>
+<section>
+<section id="slide-org8d7b737">
+<h2 id="org8d7b737"><span class="section-number-2">8.</span> Configuration</h2>
+<div class="outline-text-2" id="text-8">
 </div>
+</section>
+<section id="slide-org97529c6">
+<h3 id="org97529c6"><span class="section-number-3">8.1.</span> Flash firmware</h3>
+<div class="outline-text-3" id="text-8-1">
 </div>
-</div>
-<div id="outline-container-org3f834fa" class="outline-2">
-<h2 id="org3f834fa"><span class="section-number-2">7.</span> Configuration</h2>
-<div class="outline-text-2" id="text-7">
-</div>
-<div id="outline-container-org4d024c6" class="outline-3">
-<h3 id="org4d024c6"><span class="section-number-3">7.1.</span> Flash firmware</h3>
-<div class="outline-text-3" id="text-7-1">
-<ul class="org-ul">
-<li>ZMK</li>
-<li>QMK</li>
+</section>
+<section id="slide-org74409bc">
+<h4 id="org74409bc"><span class="section-number-4">8.1.1.</span> QMK</h4>
+<ul>
+<li>Open source</li>
+<li>Mature</li>
+<li>Wired</li>
+<li>Support souris/pointing devices</li>
+
 </ul>
-</div>
-</div>
-<div id="outline-container-org674083d" class="outline-3">
-<h3 id="org674083d"><span class="section-number-3">7.2.</span> Features</h3>
-<div class="outline-text-3" id="text-7-2">
-<ul class="org-ul">
+</section>
+<section id="slide-org7c749d2">
+<h4 id="org7c749d2"><span class="section-number-4">8.1.2.</span> ZMK</h4>
+<ul>
+<li>Open source</li>
+<li>Assez récent</li>
+<li>Wireless first</li>
+<li>Pas du support pour souris(-ish)</li>
+
+</ul>
+</section>
+<section id="slide-orgc65bb25">
+<h3 id="orgc65bb25"><span class="section-number-3">8.2.</span> Features</h3>
+<ul>
 <li>LEDs</li>
 <li>OLEDs</li>
 <li>Encodeurs</li>
 <li>Émulation souris</li>
-<li>Keymap</li>
+
 </ul>
+</section>
+<section id="slide-org532d249">
+<h3 id="org532d249"><span class="section-number-3">8.3.</span> Keymap</h3>
+<p>
+Exemple:
+<a href="file:///Users/joel/qmk_firmware/keyboards/crkbd/keymaps/pacane/keymap.c">file:///Users/joel/qmk_firmware/keyboards/crkbd/keymaps/pacane/keymap.c</a>
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-c"   ><code trim>const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [_CLMK] = LAYOUT_split_3x6_3(
+      MEH_ESC,  HOME_Q, HOME_W,  HOME_F,  HOME_P,  HOME_B,          
+      KC_LSFT,  HOME_A, HOME_R,  HOME_S,  HOME_T,  HOME_G,          
+      LCTL_TAB, KC_Z,   KC_X,    KC_C,    KC_D,    KC_V,            
+                                         T_FUN,   T_LOW,   KC_SPC,  
+  ),
+  [_LOW] = LAYOUT_split_3x6_3(
+     KC_TAB,  XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX,  KC_MPRV,         
+    MO(_WIN), XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_MPLY,         
+     KC_LCTL, XXXXXXX, XXXXXXX, KC_RBRC, XXXXXXX,  KC_MNXT,         
+                                          _______, _______, _______,
+  ),
+};
+</code></pre>
 </div>
+</section>
+</section>
+<section>
+<section id="slide-org204048b">
+<h2 id="org204048b"><span class="section-number-2">9.</span> Considérations</h2>
+<div class="outline-text-2" id="text-9">
 </div>
+</section>
+<section id="slide-org75a5578">
+<h3 id="org75a5578"><span class="section-number-3">9.1.</span> Adaptation</h3>
+<div class="outline-text-3" id="text-9-1">
 </div>
-<div id="outline-container-org5665e64" class="outline-2">
-<h2 id="org5665e64"><span class="section-number-2">8.</span> Considérations</h2>
-<div class="outline-text-2" id="text-8">
-</div>
-<div id="outline-container-orge07f99c" class="outline-3">
-<h3 id="orge07f99c"><span class="section-number-3">8.1.</span> Adaptation</h3>
-<div class="outline-text-3" id="text-8-1">
-</div>
-<div id="outline-container-orgd72bb92" class="outline-4">
-<h4 id="orgd72bb92"><span class="section-number-4">8.1.1.</span> Espace mental</h4>
-</div>
-<div id="outline-container-org1a41490" class="outline-4">
-<h4 id="org1a41490"><span class="section-number-4">8.1.2.</span> Layouts alternatifs</h4>
-<div class="outline-text-4" id="text-8-1-2">
+</section>
+<section id="slide-orgd8e787a">
+<h4 id="orgd8e787a"><span class="section-number-4">9.1.1.</span> Espace mental</h4>
+<p>
+Split vs non-split
+</p>
+</section>
+<section id="slide-orgc718206">
+<h4 id="orgc718206"><span class="section-number-4">9.1.2.</span> Layouts alternatifs</h4>
+<div class="outline-text-4" id="text-9-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="org36bfee1"></a>Français?<br /></li>
-<li><a id="org9eddb9e"></a>Colemak-DH<br />
-<div class="outline-text-5" id="text-8-1-2-2">
+<li><a id="orgd72a0a8"></a>Ergonomie vs Minimalisme<br />
+<ul>
+<li>On amène les touches aux doigts et non les doigts aux touches.</li>
+<li>34 touches?</li>
+<li>Français?
+<img src="ferris sweep.webp" alt="ferris sweep.webp" /></li>
 
-<div id="orgcd1b741" class="figure">
+</ul>
+<ol class="org-ol">
+<li><a id="orgf1480a9"></a>Fonctionalités pour aider au minimalisme<br />
+<ul>
+<li>Hold Tap</li>
+<li>Mod Tap</li>
+<li>Layers</li>
+<li>Homerow mods</li>
+
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgd43b67f"></a>Colemak-DH<br />
+<div id="org2321a35" class="figure">
 <p><img src="colemak_dhm.png" alt="colemak_dhm.png" />
 </p>
 </div>
-</div>
 </li>
-<li><a id="orge7dd481"></a>Layers<br /></li>
-<li><a id="org8d35fc5"></a>Miryoku<br />
-<div class="outline-text-5" id="text-8-1-2-4">
-
-<div id="orgacafa35" class="figure">
+<li><a id="orgd64395c"></a>Miryoku<br />
+<div id="org23881fe" class="figure">
 <p><img src="miryoku.png" alt="miryoku.png" />
 </p>
 </div>
-</div>
 </li>
-<li><a id="orgf38401f"></a>Custom!<br /></li>
+<li><a id="orge12c835"></a>Custom!<br /></li>
 </ol>
+</section>
+<section id="slide-orgdcfb6a1">
+<h4 id="orgdcfb6a1"><span class="section-number-4">9.1.3.</span> Pratique</h4>
+<ul>
+<li>Keybr</li>
+<li>Monkeytype</li>
+<li>Autres jeux</li>
+<li>Coder</li>
+
+</ul>
+</section>
+<section id="slide-orgfb52ac6">
+<h3 id="orgfb52ac6"><span class="section-number-3">9.2.</span> Alternance au travail pour productivité</h3>
+</section>
+<section id="slide-org344bb32">
+<h3 id="org344bb32"><span class="section-number-3">9.3.</span> Coût</h3>
+</section>
+<section id="slide-orgc82880f">
+<h3 id="orgc82880f"><span class="section-number-3">9.4.</span> Temps</h3>
+<div class="org-src-container">
+
+<pre  class="src src-emacs-lisp"   ><code trim>(setq mode-line-format nil)
+(define-key org-mode-map (kbd "RET") 'open-image-presentation)
+</code></pre>
+</div>
+</section>
+</section>
 </div>
 </div>
-<div id="outline-container-orgb286ef9" class="outline-3">
-<h3 id="orgb286ef9"><span class="section-number-3">8.2.</span> Pratique</h3>
-<div class="outline-text-3" id="text-8-2">
-</div>
-<div id="outline-container-org7635882" class="outline-4">
-<h4 id="org7635882"><span class="section-number-4">8.2.1.</span> Keybr</h4>
-</div>
-<div id="outline-container-orgebbf50f" class="outline-4">
-<h4 id="orgebbf50f"><span class="section-number-4">8.2.2.</span> Monkeytype</h4>
-</div>
-<div id="outline-container-org9b6ae1e" class="outline-4">
-<h4 id="org9b6ae1e"><span class="section-number-4">8.2.3.</span> Autres jeux</h4>
-</div>
-<div id="outline-container-orge24f469" class="outline-4">
-<h4 id="orge24f469"><span class="section-number-4">8.2.4.</span> Coder</h4>
-</div>
-</div>
-<div id="outline-container-org52afb0f" class="outline-3">
-<h3 id="org52afb0f"><span class="section-number-3">8.3.</span> Alternance au travail pour productivité</h3>
-</div>
-<div id="outline-container-org2a1efc9" class="outline-3">
-<h3 id="org2a1efc9"><span class="section-number-3">8.4.</span> Coût</h3>
-</div>
-<div id="outline-container-orgd718408" class="outline-3">
-<h3 id="orgd718408"><span class="section-number-3">8.5.</span> Temps</h3>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: Joel</p>
-<p class="date">Created: 2024-10-08 Tue 22:25</p>
-<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
-</div>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
 </body>
 </html>
